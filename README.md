@@ -32,4 +32,3 @@ pnpm run dev
 
 **Author**: Therese Nielsen – Frontend Developer Student  
 GitHub: [@thnielseen](https://github.com/thnielseen)
-
