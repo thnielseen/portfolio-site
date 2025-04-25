@@ -1,0 +1,12 @@
+// @variables/_colors.scss
+
+// === 🎨 SCSS COLOR VARIABLES ===
+
+// === Backgrounds ===
+$color-darkslategray: #19393e;
+
+// === 🌐 CSS CUSTOM PROPERTY EXPORTS ===
+
+:root {
+  --color-header-bg: #{$color-darkslategray};
+}
