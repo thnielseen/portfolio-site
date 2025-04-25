@@ -1,0 +1,32 @@
+// @mixins/_mix-media.scss
+
+// === IMPORTS ===
+@use 'sass:map';
+@use '@variables/breakpoints' as bp;
+
+/**
+ * @mixin mix-media
+ * Generates a media query for predefined breakpoints in `$breakpoints`.
+ * Simplifies responsive design by automatically applying the correct media query.
+ *
+ * @param {String} $device - The breakpoint name (e.g., "mobile", "tablet").
+ *                            Must match keys in `$breakpoints`.
+ *
+ * @throws {Error} If the `$device` is not found in the breakpoints map.
+ *
+ * @example
+ *   @include mix-media(tablet) {
+ *     font-size: 2rem;
+ *   }
+ */
+@mixin mix-media($device) {
+  $query: map.get(bp.$breakpoints, $device);
+
+  @if $query == null {
+    @error "Breakpoint '#{$device}' is not defined in bp.$breakpoints.";
+  }
+
+  @media (min-width: #{$query}) {
+    @content;
+  }
+}

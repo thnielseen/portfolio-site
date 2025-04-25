@@ -1,0 +1,12 @@
+// @variables/_breakpoints.scss
+
+/* === Breakpoints ===
+* Defines device breakpoints for responsive design in pixels
+* Used by the mix-media mixin for media queries
+*/
+$breakpoints: (
+  mobile: 390px,
+  tablet: 601px,
+  laptop: 1024px,
+  desktop: 1440px,
+);
