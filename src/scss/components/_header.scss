@@ -1,0 +1,32 @@
+// @conponents/_header.scss
+
+// === IMPORTS ===
+@use '@abstracts' as *;
+
+// === LAYOUT ===
+.header {
+  min-width: 100%;
+  @include mix-flex-center();
+
+  &__content {
+    width: 100%;
+    max-width: 1440px;
+    height: fn-rem(64);
+    padding: 0.5rem;
+
+    @include mix-media(tablet) {
+      height: fn-rem(80);
+      padding: 1rem;
+    }
+    @include mix-media(laptop) {
+      height: fn-rem(96);
+      padding: 1.5rem;
+    }
+  }
+}
+
+// === COLORS ===
+
+.header {
+  background-color: var(--color-header-bg);
+}
