@@ -13,26 +13,29 @@
   &:focus {
     @include mix-unhide();
     width: 100%;
+    height: fn-rem(64);
     @include mix-flex-center();
-    padding: 1rem;
     outline: none;
 
     & span {
-      border-radius: fn-rem(8);
       padding: 0.5rem;
+      border-radius: fn-rem(8);
+      @include mix-flex-center();
       outline-offset: fn-rem(3);
       @extend %text-nav-action;
     }
   }
 }
 
-// === HEADER===
+// === HEADER ===
 .header {
+  z-index: 100;
   min-width: 100%;
   @include mix-flex-center();
   background-color: var(--color-header-bg);
 
   &__content {
+    position: relative;
     width: 100%;
     max-width: 1440px;
     height: fn-rem(64);
@@ -51,7 +54,7 @@
     }
   }
 
-  // === SOCIAL NAV ===
+  // === SOCIAL NAVIGATION ===
   .socials {
     display: flex;
     gap: 0.5rem;
@@ -82,7 +85,6 @@
 }
 
 // === COLORS ===
-
 .skip-link {
   &:focus {
     background-color: var(--color-skip-bg);
@@ -96,4 +98,85 @@
 
 .header {
   background-color: var(--color-header-bg);
+}
+
+// === HEADER NAVIGATION LAYOUT ===
+.menu__nav {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  padding-top: fn-rem(96);
+  gap: 2rem;
+  min-width: fn-rem(290);
+  width: 100%;
+  max-width: fn-rem(350);
+  height: 100%;
+  min-height: 100dvh;
+  z-index: 500;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+
+  @include mix-media(laptop) {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    width: auto;
+    max-width: none;
+    min-height: auto;
+    height: auto;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.menu__button {
+  z-index: 1000;
+  @include mix-flex-center();
+  width: fn-rem(48);
+  height: fn-rem(48);
+  border-radius: fn-rem(8);
+  perspective: 1000px;
+  transition: transform 0.5s ease-in-out;
+
+  @include mix-media(laptop) {
+    display: none;
+  }
+
+  .button__icon {
+    @include mix-flex-center();
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+  }
+
+  span {
+    font-size: 40px;
+  }
+
+  &:focus {
+    outline-offset: fn-rem(3);
+    outline: 2px solid;
+  }
+}
+
+.nav__link {
+  @extend %action-base;
+  @extend %action-animate;
+  @extend %text-nav-action;
+  padding: 1rem;
+}
+
+// === ACTIVE STATE ===
+.is-active {
+  .button__icon {
+    transform: rotateY(180deg);
+  }
 }
