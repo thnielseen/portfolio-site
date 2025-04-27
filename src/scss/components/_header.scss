@@ -4,6 +4,29 @@
 @use '@abstracts' as *;
 
 // === LAYOUT ===
+
+// === SKIP LINK ===
+// (move to base/_accessibility.scss)
+.skip-link {
+  @include mix-visually-hidden();
+
+  &:focus {
+    @include mix-unhide();
+    width: 100%;
+    @include mix-flex-center();
+    padding: 1rem;
+    outline: none;
+
+    & span {
+      border-radius: fn-rem(8);
+      padding: 0.5rem;
+      outline-offset: fn-rem(3);
+      @extend %text-nav-action;
+    }
+  }
+}
+
+// === HEADER===
 .header {
   min-width: 100%;
   @include mix-flex-center();
@@ -28,7 +51,7 @@
     }
   }
 
-  // === Social navigation ===
+  // === SOCIAL NAV ===
   .socials {
     display: flex;
     gap: 0.5rem;
@@ -56,4 +79,21 @@
       }
     }
   }
+}
+
+// === COLORS ===
+
+.skip-link {
+  &:focus {
+    background-color: var(--color-skip-bg);
+
+    & span {
+      background-color: var(--color-skip-focus);
+      outline: 2px solid var(--color-skip-focus);
+    }
+  }
+}
+
+.header {
+  background-color: var(--color-header-bg);
 }

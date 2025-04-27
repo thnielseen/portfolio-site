@@ -20,9 +20,14 @@ $color-gunmetal: #243837;
   --color-header-bg: #{$color-darkslategray};
   --color-header-text: #{$color-gunmetal};
 
-  // === Nav UI States ===
-  --color-nav-default: #{$color-gainsboro}; // normal state (även active för länk)
-  --color-nav-hover: #{$color-lightSilver}; // hover state
-  --color-nav-focus: #{$color-lightSilver}; // focus state (samma färg som hover men egen variabel)
-  --color-nav-disabled: #{$color-platinum}; // disabled/inactive state
+  // Skip Link Colors
+  --color-skip-bg: #{$color-darkslategray};
+  --color-skip-text: #{$color-gunmetal};
+  --color-skip-focus: #{$color-lightSilver};
+
+  // Nav UI States
+  --color-nav-default: #{$color-gainsboro};
+  --color-nav-hover: #{$color-lightSilver};
+  --color-nav-focus: #{$color-lightSilver};
+  --color-nav-disabled: #{$color-platinum};
 }
