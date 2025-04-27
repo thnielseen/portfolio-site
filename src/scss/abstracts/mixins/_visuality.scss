@@ -10,7 +10,7 @@
  *     @include visually-hidden;
  *   }
  */
-@mixin visually-hidden {
+@mixin mix-visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -32,7 +32,7 @@
  *     @include unhide;
  *   }
  */
-@mixin unhide {
+@mixin mix-unhide {
   all: unset;
   display: inline-block; // Change to block, flex etc if needed
 }
