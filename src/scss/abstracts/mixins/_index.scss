@@ -1,4 +1,6 @@
 // @mixins/_index.scss
 
 // === FORWARDS ===
-@forward 'mix-media';
+@forward 'media-queries';
+@forward 'flex-center';
+@forward 'visuality';
