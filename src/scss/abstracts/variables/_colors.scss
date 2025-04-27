@@ -5,8 +5,24 @@
 // === Backgrounds ===
 $color-darkslategray: #19393e;
 
+// === Nav UI ===
+$color-gainsboro: #d0e1e0;
+$color-lightSilver: #d0dddc;
+$color-platinum: #e3e8e8;
+
+// === Text ===
+$color-gunmetal: #243837;
+
 // === 🌐 CSS CUSTOM PROPERTY EXPORTS ===
 
 :root {
+  // Header Background
   --color-header-bg: #{$color-darkslategray};
+  --color-header-text: #{$color-gunmetal};
+
+  // === Nav UI States ===
+  --color-nav-default: #{$color-gainsboro}; // normal state (även active för länk)
+  --color-nav-hover: #{$color-lightSilver}; // hover state
+  --color-nav-focus: #{$color-lightSilver}; // focus state (samma färg som hover men egen variabel)
+  --color-nav-disabled: #{$color-platinum}; // disabled/inactive state
 }
