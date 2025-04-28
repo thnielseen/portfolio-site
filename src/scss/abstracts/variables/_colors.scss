@@ -26,8 +26,10 @@ $color-gunmetal: #243837;
   --color-skip-focus: #{$color-lightSilver};
 
   // Nav UI States
-  --color-nav-default: #{$color-gainsboro};
-  --color-nav-hover: #{$color-lightSilver};
-  --color-nav-focus: #{$color-lightSilver};
-  --color-nav-disabled: #{$color-platinum};
+  --color-nav-bg: #{$color-darkslategray};
+  --color-nav-text: #{$color-gunmetal};
+  --color-link-default: #{$color-gainsboro};
+  --color-link-hover: #{$color-lightSilver};
+  --color-link-focus: #{$color-lightSilver};
+  --color-link-disabled: #{$color-platinum};
 }

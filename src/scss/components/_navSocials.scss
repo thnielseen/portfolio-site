@@ -1,0 +1,33 @@
+// @components/_navSocials.scss
+
+// === IMPORTS ===
+@use '@abstracts' as *;
+
+// === SOCIAL NAVIGATION ===
+.socials {
+  display: flex;
+  gap: 0.5rem;
+
+  @include mix-media(tablet) {
+    gap: 1rem;
+  }
+  @include mix-media(laptop) {
+    gap: 1.5rem;
+  }
+
+  &__link {
+    @extend %action-base;
+    @extend %action-icon;
+    @extend %action-animate;
+
+    .icon__github {
+      @include mix-background-img();
+      background-image: url('/icons/github-icon.svg');
+    }
+
+    .icon__linkedIn {
+      @include mix-background-img();
+      background-image: url('/icons/linkedIn-icon.png');
+    }
+  }
+}

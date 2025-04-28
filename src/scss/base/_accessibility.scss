@@ -1,1 +1,29 @@
 // @/scss/base/_accessibility.scss
+
+// === IMPORTS ===
+@use '@abstracts' as *;
+
+/*== skip-link ==
+*
+*Allows user with tabnavigation and screenreaders to skip navigation and go to main ::content
+*
+*/
+.skip-link {
+  @include mix-visually-hidden();
+
+  &:focus {
+    @include mix-unhide();
+    width: 100%;
+    height: fn-rem(64);
+    @include mix-flex-center();
+    outline: none;
+
+    & span {
+      padding: 0.5rem;
+      border-radius: fn-rem(8);
+      @include mix-flex-center();
+      outline-offset: fn-rem(3);
+      @extend %text-nav-action;
+    }
+  }
+}
