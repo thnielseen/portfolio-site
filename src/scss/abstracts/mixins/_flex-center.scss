@@ -1,0 +1,18 @@
+// @mixins/_mix-flex-center.scss
+
+/**
+ * @mixin flex-center
+ * Creates a flexbox layout with centered content both horizontally and vertically.
+ * Allows optional control over direction and gap between child elements.
+ *
+ * @param {String} $direction - Flex direction, default is "row". Accepts "row" or "column".
+ * @param {Length|Number} $gap - Gap between child elements. Default is 0.
+ */
+
+@mixin mix-flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}

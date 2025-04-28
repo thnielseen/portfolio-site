@@ -1,0 +1,43 @@
+// === IMPORTS ===
+@use '@abstracts' as *;
+
+.header {
+  background-color: var(--color-header-bg);
+}
+
+.skip-link {
+  &:focus {
+    background-color: var(--color-skip-bg);
+
+    & span {
+      background-color: var(--color-skip-focus);
+      outline: 2px solid var(--color-skip-focus);
+    }
+  }
+}
+
+.menu__nav {
+  background-color: var(--color-nav-bg);
+  color: var(--color-nav-text);
+}
+
+.menu__button,
+.nav__link {
+  background-color: var(--color-link-default);
+
+  &:focus {
+    background-color: var(--color-link-focus);
+    outline-color: var(--color-link-focus);
+  }
+  &:active {
+    background-color: var(--color-link-hover);
+    outline-color: var(--color-link-hover);
+  }
+
+  &:disabled {
+    background-color: var(--color-link-disabled);
+  }
+}
+.header {
+  background-color: var(--color-header-bg);
+}

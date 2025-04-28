@@ -1,0 +1,17 @@
+// @mixins/_background-img.scss
+
+/**
+ * @mixin background-img
+ * Applies a background image with optional size and position.
+ * Useful for consistent background handling on icons, sections, and hero images.
+ *
+ * @param {String} $size - Background size. Default is "contain". Accepts "cover", "contain", etc.
+ * @param {String} $position - Background position. Default is "center". Accepts any valid CSS position value.
+ */
+
+@mixin mix-background-img($size: contain, $position: center) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+  display: inline-block;
+}
