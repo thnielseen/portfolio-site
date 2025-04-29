@@ -152,12 +152,64 @@
       class="main"
       id="content"
     >
+
+      <!-- Introduction section -->
       <section
-        class="main__presentation"
-        id="presentation"
+        class="introduction"
+        id="introduction"
+        aria-labelledby="intro-heading"
       >
-        <h2>Presentation</h2>
+        <div class="introduction__content">
+          <!-- Hero -->
+          <div class="introduction__hero">
+            <h1
+              class="introduction__name"
+              id="intro-heading"
+            >
+              Full Name
+            </h1>
+            <h2 class="introduction__title">Primary Profession Title</h2>
+            <p class="introduction__subtitle">Secondary Profession Title</p>
+          </div>
+
+          <!-- Portrait + Quote -->
+          <picture class="introduction__portrait">
+            <source
+              srcset="
+                  /images/portrait-600.webp   600w,
+                  /images/portrait-900.webp   900w,
+                  /images/portrait-1200.webp 1200w
+                "
+              type="image/webp"
+            />
+            <img
+              src="/images/portrait-900.jpg"
+              srcset="
+                  /images/portrait-600.jpg   600w,
+                  /images/portrait-900.jpg   900w,
+                  /images/portrait-1200.jpg 1200w
+                "
+              alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
+              width="900"
+              height="900"
+              loading="lazy"
+              class="introduction__img"
+            />
+          </picture>
+
+          <blockquote class="introduction__quote">Personal saying, motto or quote</blockquote>
+
+          <!-- About + CTA -->
+          <div class="introduction__presentation">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
+              vestibulum vestibulum. Curabitur ut felis ut massa convallis dignissim nec non erat.
+            </p>
+            <button class="introduction__cta">Explore My Projects</button>
+          </div>
+        </div>
       </section>
+
       <section
         class="skills"
         id="skills"
