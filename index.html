@@ -159,21 +159,25 @@
         id="introduction"
         aria-labelledby="intro-heading"
       >
-        <div class="introduction__content">
+        <div class="introduction__hero">
           <!-- Hero -->
-          <div class="introduction__hero">
+          <div class="hero__content">
             <h1
-              class="introduction__name"
+              class="hero__name"
               id="intro-heading"
             >
               Full Name
             </h1>
-            <h2 class="introduction__title">Primary Profession Title</h2>
-            <p class="introduction__subtitle">Secondary Profession Title</p>
+            <h2 class="hero__profession-primary">Primary Profession Title</h2>
+            <p class="hero__profession-secondary">Secondary Profession Title</p>
           </div>
+        </div>
+
+        <!-- Introduction content -->
+        <div class='introduction__content'>
 
           <!-- Portrait + Quote -->
-          <picture class="introduction__portrait">
+          <picture class="introduction__portrait portrait">
             <source
               srcset="
                   /images/portrait-600.webp   600w,
@@ -193,19 +197,19 @@
               width="900"
               height="900"
               loading="lazy"
-              class="introduction__img"
+              class="portrait__img"
             />
           </picture>
 
-          <blockquote class="introduction__quote">Personal saying, motto or quote</blockquote>
+          <blockquote class="introduction__quote quote">Personal saying, motto or quote</blockquote>
 
           <!-- About + CTA -->
-          <div class="introduction__presentation">
+          <div class="introduction__presentation presentation">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
               vestibulum vestibulum. Curabitur ut felis ut massa convallis dignissim nec non erat.
             </p>
-            <button class="introduction__cta">Explore My Projects</button>
+            <button class="presentation__cta">Explore My Projects</button>
           </div>
         </div>
       </section>
