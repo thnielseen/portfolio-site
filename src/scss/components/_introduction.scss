@@ -56,3 +56,67 @@
     }
   }
 }
+
+// === COMPONENT STYLING ===
+
+// == hero ==
+.hero {
+  padding: 0.5rem;
+  padding-top: fn-rem(80);
+  @include mix-flex-center();
+  min-height: 200px;
+  max-height: 300px;
+
+  @include mix-media(tablet) {
+    padding: 3rem;
+    padding-top: fn-rem(96);
+    justify-content: end;
+    align-items: start;
+    min-height: 250px;
+    max-height: 350px;
+  }
+
+  @include mix-media(laptop) {
+    padding: 6rem;
+    padding-top: fn-rem(116);
+    align-items: end;
+    min-height: 350px;
+    max-height: 400px;
+  }
+
+  &__content {
+    @include mix-flex-center(column);
+    border-radius: fn-rem(8);
+    background-color: $color-springwood-90;
+    color: $color-gunmetal;
+    flex-shrink: 0;
+    padding: 0.5rem;
+
+    @include mix-media(tablet) {
+      margin-top: 3rem;
+      min-width: 300px;
+    }
+  }
+
+  &__name {
+    @extend %hero-font;
+    line-height: 1;
+    align-self: stretch;
+    font-size: clamp(1.5rem, calc(1.2rem + 2vw), 3rem);
+  }
+
+  &__profession-primary {
+    @extend %hero-font;
+    align-self: stretch;
+    text-transform: uppercase;
+    font-size: clamp(1rem, calc(0.9rem + 1vw), 1.5rem);
+  }
+
+  &__profession-secondary {
+    @extend %hero-font;
+    align-self: stretch;
+    text-transform: uppercase;
+    font-size: clamp(0.875rem, calc(0.8rem + 0.9vw), 1.375rem);
+  }
+}
+
