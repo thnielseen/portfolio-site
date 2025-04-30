@@ -1,12 +1,24 @@
 // @variables/_breakpoints.scss
 
-/* === Breakpoints ===
-* Defines device breakpoints for responsive design in pixels
-* Used by the mix-media mixin for media queries
-*/
-$breakpoints: (
+// === Breakpoints ===
+// Define responsive breakpoints in pixels.
+// Used with the `@include mix-media()` mixin.
+
+// Minimum width breakpoints (start of ranges)
+$min-breakpoints: (
   mobile: 390px,
   tablet: 601px,
   laptop: 1050px,
   desktop: 1440px,
+
+  hero-m: 300px,
+  hero-l: 900px,
+  hero-xl: 1550px,
+);
+
+// Maximum width breakpoints (end of ranges)
+$max-breakpoints: (
+  hero-s: 299px,
+  hero-m: 899px,
+  hero-l: 1549px,
 );
