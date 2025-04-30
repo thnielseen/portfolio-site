@@ -1,0 +1,58 @@
+// @layout/_introduction.scss
+
+// === IMPORTS ===
+@use '@abstracts' as *;
+
+// === LAYOUT ===
+.introduction {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.introduction__hero {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  aspect-ratio: 2 / 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  // Fallback for browsers without WebP support
+  background-image: url('/images/hero-1550.jpg');
+
+  // max-width: 299px
+  @include mix-media(hero-s, max) {
+    @supports (background-image: image-set(url('/images/hero-600.webp') type('image/webp'))) {
+      background-image: image-set(url('/images/hero-600.webp') 1x, url('/images/hero-900.webp') 2x);
+    }
+  }
+
+  // 300px–899px
+  @include mix-media(hero-m, between) {
+    @supports (background-image: image-set(url('/images/hero-900.webp') type('image/webp'))) {
+      background-image: image-set(
+        url('/images/hero-900.webp') 1x,
+        url('/images/hero-1550.webp') 2x
+      );
+    }
+  }
+
+  // 900px–1549px
+  @include mix-media(hero-l, between) {
+    @supports (background-image: image-set(url('/images/hero-1550.webp') type('image/webp'))) {
+      background-image: image-set(
+        url('/images/hero-1550.webp') 1x,
+        url('/images/hero-3100.webp') 2x
+      );
+    }
+  }
+
+  // min-width: 1550px
+  @include mix-media(hero-xl, min) {
+    @supports (background-image: image-set(url('/images/hero-3100.webp') type('image/webp'))) {
+      background-image: image-set(url('/images/hero-3100.webp') 1x);
+    }
+  }
+}
