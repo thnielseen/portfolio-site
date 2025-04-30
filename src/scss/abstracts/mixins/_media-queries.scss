@@ -1,32 +1,60 @@
-// @mixins/media-queries.scss
-
 // === IMPORTS ===
 @use 'sass:map';
 @use '@variables/breakpoints' as bp;
 
 /**
  * @mixin mix-media
- * Generates a media query for predefined breakpoints in `$breakpoints`.
- * Simplifies responsive design by automatically applying the correct media query.
+ * Creates a media query based on predefined breakpoints in `bp.$min-breakpoints` or `bp.$max-breakpoints`.
  *
- * @param {String} $device - The breakpoint name (e.g., "mobile", "tablet").
- *                            Must match keys in `$breakpoints`.
- *
- * @throws {Error} If the `$device` is not found in the breakpoints map.
+ * @param {String} $device - The name of the breakpoint, e.g., "tablet", "hero-l".
+ * @param {String} $type - Type of query: "min" (default), "max", or "between".
  *
  * @example
  *   @include mix-media(tablet) {
- *     font-size: 2rem;
+ *     font-size: 1.5rem;
+ *   }
+ *
+ *   @include mix-media(hero-l, max) {
+ *     display: none;
+ *   }
+ *
+ *   @include mix-media(hero-m, between) {
+ *     background-color: red;
  *   }
  */
-@mixin mix-media($device) {
-  $query: map.get(bp.$breakpoints, $device);
+@mixin mix-media($device, $type: min) {
+  @if $type == min {
+    $query: map.get(bp.$min-breakpoints, $device);
 
-  @if $query == null {
-    @error "Breakpoint '#{$device}' is not defined in bp.$breakpoints.";
-  }
+    @if $query == null {
+      @error "Min breakpoint '#{$device}' not found in \$min-breakpoints.";
+    }
 
-  @media (min-width: #{$query}) {
-    @content;
+    @media (min-width: $query) {
+      @content;
+    }
+  } @else if $type == max {
+    $query: map.get(bp.$max-breakpoints, $device);
+
+    @if $query == null {
+      @error "Max breakpoint '#{$device}' not found in \$max-breakpoints.";
+    }
+
+    @media (max-width: $query) {
+      @content;
+    }
+  } @else if $type == between {
+    $min: map.get(bp.$min-breakpoints, $device);
+    $max: map.get(bp.$max-breakpoints, $device);
+
+    @if $min == null or $max == null {
+      @error "Breakpoint '#{$device}' must be defined in both \$min-breakpoints and \$max-breakpoints for 'between'.";
+    }
+
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @error "Unknown type '#{$type}'. Use 'min', 'max' or 'between'.";
   }
 }
