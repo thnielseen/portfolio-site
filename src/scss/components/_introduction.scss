@@ -70,6 +70,7 @@
       padding: fn-rem(16);
     }
     @include mix-media(laptop) {
+      padding: fn-rem(16);
       max-width: fn-rem(1050);
     }
 
@@ -86,6 +87,7 @@
       }
 
       @include mix-media(laptop) {
+        padding: fn-rem(32);
         margin-top: -25%;
       }
     }
@@ -223,5 +225,25 @@
     @include mix-media(laptop) {
       font-size: fn-rem(48);
     }
+  }
+}
+
+.presentation {
+  width: 100%;
+  padding: 1rem;
+  max-width: fn-rem(450);
+  @extend %presentation-font;
+  font-size: fn-rem(16);
+
+  @include mix-media(tablet) {
+    padding: 1.5rem;
+    max-width: fn-rem(550);
+    font-size: fn-rem(18);
+  }
+
+  @include mix-media(laptop) {
+    padding: 2rem;
+    max-width: fn-rem(650);
+    font-size: fn-rem(20);
   }
 }
