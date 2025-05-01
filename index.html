@@ -43,10 +43,9 @@
 
     <!-- Google fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Alegreya+Sans+SC:ital,wght@0,100;0,200;0,400;0,700&family=Crimson+Pro:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Nunito:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Alegreya+Sans+SC:ital,wght@0,100;0,200;0,400;0,700&family=Crimson+Pro:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Nunito:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Playball&display=swap"
       rel="stylesheet"
     >
-
   </head>
 
   <body>
@@ -59,7 +58,6 @@
     <!-- Header section with menu and nav -->
     <header class="header">
       <div class="header__content">
-
         <!-- Toggle menu button -->
         <button
           class="menu__button"
@@ -68,7 +66,7 @@
           aria-controls="menuNav"
           aria-expanded="false"
         >
-          <span class='button__icon'>
+          <span class="button__icon">
             <span class="material-symbols-rounded">menu_open</span>
           </span>
         </button>
@@ -146,20 +144,17 @@
       </div>
     </header>
 
-
     <!-- Page content -->
     <main
       class="main"
       id="content"
     >
-
       <!-- Introduction section -->
       <section
         class="introduction"
         id="introduction"
         aria-labelledby="intro-heading"
       >
-
         <!-- Hero -->
         <div class="introduction__hero hero">
           <div class="hero__content">
@@ -175,34 +170,43 @@
         </div>
 
         <!-- Introduction content -->
-        <div class='introduction__content'>
+        <div class="introduction__content">
+          <div class="introduction__content-wrap">
 
-          <!-- Portrait + Quote -->
-          <picture class="introduction__portrait portrait">
-            <source
-              srcset="
+            <!-- Portrait + Quote -->
+            <picture class="introduction__portrait portrait">
+              <source
+                srcset="
                   /images/portrait-600.webp   600w,
                   /images/portrait-900.webp   900w,
                   /images/portrait-1200.webp 1200w
                 "
-              type="image/webp"
-            />
-            <img
-              src="/images/portrait-900.jpg"
-              srcset="
+                type="image/webp"
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+              >
+              <img
+                src="/images/portrait-900.jpg"
+                srcset="
                   /images/portrait-600.jpg   600w,
                   /images/portrait-900.jpg   900w,
                   /images/portrait-1200.jpg 1200w
                 "
-              alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
-              width="900"
-              height="900"
-              loading="lazy"
-              class="portrait__img"
-            >
-          </picture>
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
+                width="900"
+                height="900"
+                loading="lazy"
+                class="portrait__img"
+              >
+            </picture>
 
-          <blockquote class="introduction__quote quote">Personal saying, motto or quote</blockquote>
+            <blockquote class="introduction__quote quote">
+              <p>Curiosity is my <span class="quote__emph">compass</span>,</p>
+              <p>and learning is the <span class="quote__emph">journey</span>,</p>
+              <p class="quote__line">growth happens when you’re</p>
+              <p class="quote__punch">slightly terrified</p>
+            </blockquote>
+          </div>
 
           <!-- About + CTA -->
           <div class="introduction__presentation presentation">

@@ -38,6 +38,29 @@
     background-color: var(--color-link-disabled);
   }
 }
+
 .header {
   background-color: var(--color-header-bg);
 }
+
+.quote {
+  color: var(--color-quote);
+}
+
+.introduction{
+  background-color: var(--color-intro-bg);
+  color: var(--color-intro-text);
+
+  .hero{
+    &__content{
+      background-color: var(--color-hero-box);
+    }
+  }
+
+  .portrait{
+    &__img{
+      border-color: var(--color-portrait-frame);
+    }
+  }
+
+} 

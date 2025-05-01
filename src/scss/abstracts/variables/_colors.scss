@@ -14,6 +14,7 @@ $color-platinum: #e3e8e8;
 
 // === Text ===
 $color-gunmetal: #243837;
+$color-darkgoldenrod: #c5801a;
 
 // === 🌐 CSS CUSTOM PROPERTY EXPORTS ===
 
@@ -34,4 +35,11 @@ $color-gunmetal: #243837;
   --color-link-hover: #{$color-lightSilver};
   --color-link-focus: #{$color-lightSilver};
   --color-link-disabled: #{$color-platinum};
+
+  // Introduction
+  --color-intro-bg: #{$color-springwood};
+  --color-intro-text: #{$color-gunmetal};
+  --color-hero-box: #{$color-springwood-90};
+  --color-portrait-frame: #{$color-darkslategray};
+  --color-quote: #{$color-darkgoldenrod};
 }
