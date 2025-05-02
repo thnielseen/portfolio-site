@@ -38,6 +38,47 @@
     background-color: var(--color-link-disabled);
   }
 }
+
 .header {
   background-color: var(--color-header-bg);
 }
+
+.quote {
+  color: var(--color-quote);
+}
+
+  .introduction {
+    background-color: var(--color-intro-bg);
+    color: var(--color-intro-text);
+
+    .hero {
+      &__content {
+        background-color: var(--color-hero-box);
+      }
+    }
+
+    .portrait {
+      &__img {
+        border-color: var(--color-portrait-frame);
+      }
+    }
+
+   .presentation {
+  &__cta {
+    background-color: var(--color-cta-bg);
+    color: var(--color-cta-text);
+
+    &:active,
+    &:hover {
+      background-color: var(--color-cta-hover);
+    }
+
+    &:focus {
+      background-color: var(--color-cta-focus);
+      outline: 2px solid var(--color-cta-focus);
+      outline-offset: fn-rem(3);
+    }
+  }
+}
+
+  }

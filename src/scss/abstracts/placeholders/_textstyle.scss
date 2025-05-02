@@ -1,0 +1,25 @@
+// @placeholders/_actions.scss
+
+// === IMPORTS ===
+@use '@variables' as *;
+
+// === PLACEHOLDERS ===
+%hero-font {
+  font-family: $font-alegreya;
+  font-style: normal;
+  font-weight: $font-regular;
+  line-height: 1.15;
+  letter-spacing: 0.05rem;
+}
+
+%quote-font {
+  line-height: 1.1;
+  font-family: playball;
+  letter-spacing: 0.04rem;
+}
+
+%presentation-font {
+  font-family: $font-crimson;
+  font-weight: 200;
+  line-height: 1.5;
+}
