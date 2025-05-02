@@ -11,10 +11,12 @@ $color-springwood-90: rgba(246, 244, 236, 0.9);
 $color-gainsboro: #d0e1e0;
 $color-lightSilver: #d0dddc;
 $color-platinum: #e3e8e8;
+$color-mandalay: #B97918;
+$color-renosand: #9E6714;
 
 // === Text ===
 $color-gunmetal: #243837;
-$color-darkgoldenrod: #c5801a;
+$color-perutan: #813C06;
 
 // === 🌐 CSS CUSTOM PROPERTY EXPORTS ===
 
@@ -41,5 +43,11 @@ $color-darkgoldenrod: #c5801a;
   --color-intro-text: #{$color-gunmetal};
   --color-hero-box: #{$color-springwood-90};
   --color-portrait-frame: #{$color-darkslategray};
-  --color-quote: #{$color-darkgoldenrod};
+  --color-quote: #{$color-perutan};
+
+  --color-cta-bg: #{$color-mandalay};
+  --color-cta-text: #fff;
+  --color-cta-hover: #{$color-renosand};
+  --color-cta-focus: #{$color-renosand};
+  --color-cta-disabled: #{$color-platinum};
 }
