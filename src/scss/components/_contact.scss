@@ -1,0 +1,109 @@
+@use '@abstracts' as *;
+
+.contact {
+  width: 100%;
+  @include mix-flex-center(column);
+  gap: 2rem;
+  padding: 2rem;
+
+  &__title {
+    font-family: $font-alegreya;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: 0.5rem;
+  }
+
+  &__profile {
+    @include mix-flex-center();
+    gap: 1rem;
+
+    @include mix-media(tablet) {
+      gap: 2rem;
+    }
+  }
+
+  &__portrait {
+    width: 100px;
+    height: auto;
+    @include mix-media(tablet) {
+      width: 150px;
+    }
+  }
+
+  &__name {
+    @extend %hero-font;
+    line-height: 1;
+    align-self: stretch;
+    font-size: 22px;
+
+    @include mix-media(mobile) {
+      font-size: 24px;
+    }
+    @include mix-media(tablet) {
+      font-size: 26px;
+    }
+    @include mix-media(laptop) {
+      font-size: 32px;
+    }
+  }
+
+  &__profession-primary {
+    @extend %hero-font;
+    align-self: stretch;
+    text-transform: uppercase;
+    font-size: 13px;
+    @include mix-media(mobile) {
+      font-size: 16px;
+    }
+    @include mix-media(laptop) {
+      font-size: 18px;
+    }
+  }
+
+  &__profession-secondary {
+    @extend %hero-font;
+    align-self: stretch;
+    text-transform: uppercase;
+    font-size: 12px;
+    @include mix-media(mobile) {
+      font-size: 14px;
+    }
+    @include mix-media(laptop) {
+      font-size: 16px;
+    }
+  }
+  &__details {
+    align-self: center;
+    font-size: 16px;
+    font-family: $font-crimson;
+    font-style: normal;
+    @include mix-media(mobile) {
+      font-size: 18px;
+    }
+    @include mix-media(laptop) {
+      font-size: 20px;
+    }
+  }
+  &__content {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    .icon__github-black {
+      @include mix-background-img();
+      background-image: url('/icons/github-icon-black.svg');
+    }
+
+    .icon__linkedIn-black {
+      @include mix-background-img();
+      background-image: url('/icons/linkedIn-icon-black.png');
+    }
+  }
+}
+
+.visually-hidden {
+  @include mix-visually-hidden;
+}

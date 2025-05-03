@@ -41,7 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=menu_open"
     >
 
-    <!-- Google fonts -->
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Alegreya+Sans+SC:ital,wght@0,100;0,200;0,400;0,700&family=Crimson+Pro:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Nunito:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Playball&display=swap"
       rel="stylesheet"
@@ -49,16 +49,15 @@
   </head>
 
   <body>
-    <!-- Skip navigation for sr -->
+    <!-- Skip navigation for screen readers -->
     <a
       href="#content"
       class="skip-link"
     ><span>Skip to main content</span></a>
 
-    <!-- Header section with menu and nav -->
+    <!-- Header with nav -->
     <header class="header">
       <div class="header__content">
-        <!-- Toggle menu button -->
         <button
           class="menu__button"
           id="menuButton"
@@ -71,7 +70,6 @@
           </span>
         </button>
 
-        <!-- Page navigation menu -->
         <nav
           class="nav"
           id="menuNav"
@@ -99,7 +97,6 @@
           ><span>Contact</span></a>
         </nav>
 
-        <!-- Social Navigation -->
         <nav
           class="header__nav socials"
           aria-label="External Links to GitHub, LinkedIn and CV"
@@ -144,53 +141,37 @@
       </div>
     </header>
 
-    <!-- Page content -->
     <main
       class="main"
       id="content"
     >
-      <!-- Introduction section -->
       <section
         class="introduction"
         id="introduction"
         aria-labelledby="intro-heading"
       >
-        <!-- Hero -->
         <div class="introduction__hero hero">
           <div class="hero__content">
             <h1
               class="hero__name"
               id="intro-heading"
-            >
-              Therese Nielsen
-            </h1>
+            >Therese Nielsen</h1>
             <h2 class="hero__profession-primary">Frontend developer student</h2>
             <p class="hero__profession-secondary">Leg. Biomedicinsk analytiker</p>
           </div>
         </div>
 
-        <!-- Introduction content -->
         <div class="introduction__content">
           <div class="introduction__content-wrap">
-
-            <!-- Portrait + Quote -->
             <picture class="introduction__portrait portrait">
               <source
-                srcset="
-                  /images/portrait-600.webp   600w,
-                  /images/portrait-900.webp   900w,
-                  /images/portrait-1200.webp 1200w
-                "
+                srcset="/images/portrait-600.webp 600w, /images/portrait-900.webp 900w, /images/portrait-1200.webp 1200w"
                 type="image/webp"
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
               >
               <img
                 src="/images/portrait-900.jpg"
-                srcset="
-                  /images/portrait-600.jpg   600w,
-                  /images/portrait-900.jpg   900w,
-                  /images/portrait-1200.jpg 1200w
-                "
+                srcset="/images/portrait-600.jpg 600w, /images/portrait-900.jpg 900w, /images/portrait-1200.jpg 1200w"
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                 alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
                 width="900"
@@ -208,7 +189,6 @@
             </blockquote>
           </div>
 
-          <!-- About + CTA -->
           <div class="introduction__presentation presentation">
             <p>
               I’m a curious and driven person with eight years of experience in clinical laboratory
@@ -217,9 +197,9 @@
               learning, growing, and contributing with passion, precision, and a strong technical
               interest.
             </p>
-
-            <button class="presentation__cta"><span><span class="hide">Explore</span> My
-                Projects</span></button>
+            <button class="presentation__cta">
+              <span><span class="hide">Explore</span> My Projects</span>
+            </button>
           </div>
         </div>
       </section>
@@ -230,23 +210,122 @@
       >
         <h2>Skills</h2>
       </section>
+
       <section
         class="projects"
         id="projects"
       >
         <h2>Projects</h2>
       </section>
+
       <section
         class="about"
         id="about"
       >
         <h2>About Me</h2>
       </section>
+
       <section
         class="contact"
         id="contact"
+        aria-labelledby="contact-heading"
       >
-        <h2>Contact</h2>
+        <h2
+          class="contact__title"
+          id="contact-heading"
+        >Get in touch</h2>
+
+        <div class="contact__content">
+          <div class="contact__profile">
+            <picture class="contact__portrait portrait">
+              <source
+                srcset="/images/portrait-600.webp 600w, /images/portrait-900.webp 900w, /images/portrait-1200.webp 1200w"
+                type="image/webp"
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+              >
+              <img
+                src="/images/portrait-900.jpg"
+                srcset="/images/portrait-600.jpg 600w, /images/portrait-900.jpg 900w, /images/portrait-1200.jpg 1200w"
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
+                width="900"
+                height="900"
+                loading="lazy"
+                class="portrait__img"
+              >
+            </picture>
+
+            <div class="contact__info">
+              <p class="contact__name">Therese Nielsen</p>
+              <p class="contact__profession-primary">Frontend developer student</p>
+              <p class="contact__profession-secondary">Leg. Biomedicinsk analytiker</p>
+            </div>
+          </div>
+
+          <address class="contact__details">
+            <p class="contact__item">
+              <a
+                href="tel:+46708562535"
+                aria-label="Call Therese Nielsen at +46 708 56 25 35"
+              >+46 (0) 708 56 25 35</a>
+            </p>
+            <p class="contact__item">
+              <a
+                href="mailto:therese.nielsen@medieinstitutet.se"
+                aria-label="Email Therese at therese dot nielsen at medieinstitutet dot se"
+              >therese.nielsen@medieinstitutet.se</a>
+            </p>
+            <p class="contact__item">
+              <a
+                href="mailto:tess.prog@gmail.com"
+                aria-label="Email Therese at tess dot prog at gmail dot com"
+              >tess.prog@gmail.com</a>
+            </p>
+            <p class="contact__item">Gothenburg, Sweden</p>
+          </address>
+
+          <nav
+            class="contact__socials socials"
+            aria-label="Social and download links"
+          >
+            <a
+              class="socials__link"
+              href="https://github.com/thnielseen"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Therese's GitHub profile"
+            >
+              <span
+                class="icon__github-black"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <a
+              class="socials__link"
+              href="https://www.linkedin.com/in/therese-j-nielsen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Therese's LinkedIn profile"
+            >
+              <span
+                class="icon__linkedIn-black"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <a
+              class="socials__link"
+              href="/files/therese-nielsen-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Therese's CV as PDF"
+            >
+              <span
+                class="icon__cv"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </nav>
+        </div>
       </section>
     </main>
 
