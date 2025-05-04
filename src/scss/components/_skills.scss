@@ -1,0 +1,126 @@
+@use '@abstracts' as *;
+
+.skills {
+  @include mix-flex-center(column);
+  padding: 1rem;
+  font-family: $font-crimson;
+  font-size: 1rem;
+  @include mix-media(tablet) {
+    padding: 2rem;
+  }
+  &__title {
+    font-family: $font-alegreya;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.5rem;
+
+    @include mix-media(laptop) {
+      font-size: 48px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+    @include mix-media(tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: start;
+    }
+  }
+
+  &__category {
+    width: 100%;
+    @include mix-flex-center(column);
+    min-width: 300px;
+    max-width: 350px;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    @include mix-media(tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      min-width: 350px;
+      max-width: 400px;
+    }
+  }
+}
+
+.category__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-family: $font-alegreya;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.category__list {
+  @include mix-flex-center(column);
+}
+
+.category__item {
+  cursor: pointer;
+  font-family: $font-alegreya;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+
+  &:hover .item__description,
+  &:focus-within .item__description {
+    padding: 0.5rem;
+    border-radius: 8px;
+    opacity: 1;
+    max-height: 300px;
+  }
+
+  &:focus {
+    outline: 2px dashed;
+    outline-offset: 4px;
+  }
+
+  .item__description {
+    margin-top: 0.5rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      opacity 0.3s ease,
+      max-height 0.3s ease;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.category__title-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  @include mix-background-img();
+}
+
+.icon__code-black {
+  background-image: url('/icons/codeskills.svg');
+}
+
+.icon__design-black {
+  background-image: url('/icons/design.svg');
+}
+
+.icon__tools-black {
+  background-image: url('/icons/tools.svg');
+}
+
+.icon__soft-black {
+  background-image: url('/icons/softskills.svg');
+}

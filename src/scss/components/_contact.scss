@@ -3,15 +3,19 @@
 .contact {
   width: 100%;
   @include mix-flex-center(column);
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem;
 
   &__title {
     font-family: $font-alegreya;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 26px;
     letter-spacing: 0.5rem;
+
+    @include mix-media(mobile) {
+      font-size: 32px;
+    }
   }
 
   &__profile {

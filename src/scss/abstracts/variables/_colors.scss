@@ -4,10 +4,12 @@
 
 // === Backgrounds ===
 $color-darkslategray: #19393e;
-$color-springwood: rgba(246, 244, 236, 1);
+$color-springwood: #f6f4ec;
 $color-springwood-90: rgba(246, 244, 236, 0.9);
-$color-pasiswhite: #d1e0d9;
+$color-pasiswhite: #d3e1da;
 $color-nebula: #b1d6c4;
+$color-harp: #deede6;
+$color-junglemist: #b1cfd6;
 
 // === Nav UI ===
 $color-gainsboro: #d0e1e0;
@@ -19,6 +21,7 @@ $color-renosand: #9e6714;
 // === Text ===
 $color-gunmetal: #243837;
 $color-perutan: #813c06;
+$color-celtic: #234333;
 
 // === 🌐 CSS CUSTOM PROPERTY EXPORTS ===
 
@@ -48,8 +51,15 @@ $color-perutan: #813c06;
   --color-quote: #{$color-perutan};
 
   --color-cta-bg: #{$color-mandalay};
-  --color-cta-text: #fff;
+  --color-cta-text: #{$color-pasiswhite};
   --color-cta-hover: #{$color-renosand};
   --color-cta-focus: #{$color-renosand};
   --color-cta-disabled: #{$color-platinum};
+
+  --color-bg-contact: #{$color-junglemist};
+  --color-bg-skills: #{$color-nebula};
+  --color-text-skills: #{$color-celtic};
+  --color-bg-category: #{$color-harp};
+  --color-description-hover: #{$color-pasiswhite};
+  --color-outline-focus: #{$color-celtic};
 }

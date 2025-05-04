@@ -47,38 +47,65 @@
   color: var(--color-quote);
 }
 
-  .introduction {
-    background-color: var(--color-intro-bg);
-    color: var(--color-intro-text);
+.introduction {
+  background-color: var(--color-intro-bg);
+  color: var(--color-intro-text);
 
-    .hero {
-      &__content {
-        background-color: var(--color-hero-box);
+  .hero {
+    &__content {
+      background-color: var(--color-hero-box);
+    }
+  }
+
+  .portrait {
+    &__img {
+      border-color: var(--color-portrait-frame);
+    }
+  }
+
+  .presentation {
+    &__cta {
+      background-color: var(--color-cta-bg);
+      color: var(--color-cta-text);
+
+      &:active,
+      &:hover {
+        background-color: var(--color-cta-hover);
       }
-    }
 
-    .portrait {
-      &__img {
-        border-color: var(--color-portrait-frame);
+      &:focus {
+        background-color: var(--color-cta-focus);
+        outline: 2px solid var(--color-cta-focus);
+        outline-offset: fn-rem(3);
       }
-    }
-
-   .presentation {
-  &__cta {
-    background-color: var(--color-cta-bg);
-    color: var(--color-cta-text);
-
-    &:active,
-    &:hover {
-      background-color: var(--color-cta-hover);
-    }
-
-    &:focus {
-      background-color: var(--color-cta-focus);
-      outline: 2px solid var(--color-cta-focus);
-      outline-offset: fn-rem(3);
     }
   }
 }
 
+.skills {
+  background-color: var(--color-bg-skills);
+  color: var(--color-text-skills);
+
+  &__category {
+    background-color: var(--color-bg-category);
   }
+
+  &__title {
+    color: var(--color-text-skills);
+  }
+}
+
+.category__item {
+  &:hover .item__description,
+  &:focus-within .item__description {
+    background-color: var(--color-description-hover);
+  }
+
+  &:focus {
+    outline-color: var(--color-outline-focus);
+  }
+}
+
+.contact {
+  background-color: var(--color-bg-category);
+}
