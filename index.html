@@ -24,12 +24,14 @@
       href="/favicon/favicon.ico"
       type="image/x-icon"
     >
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="/favicon/favicon-32x32.png"
     >
+
     <link
       rel="apple-touch-icon"
       href="/favicon/apple-touch-icon.png"
@@ -150,14 +152,18 @@
         id="introduction"
         aria-labelledby="intro-heading"
       >
-        <div class="introduction__hero hero">
-          <div class="hero__content">
-            <h1
-              class="hero__name"
-              id="intro-heading"
-            >Therese Nielsen</h1>
-            <h2 class="hero__profession-primary">Frontend developer student</h2>
-            <p class="hero__profession-secondary">Leg. Biomedicinsk analytiker</p>
+        <div class="introduction__hero">
+          <div class="hero">
+            <div class="hero__content">
+              <h1
+                class="hero__name"
+                id="intro-heading"
+              >
+                Therese Nielsen
+              </h1>
+              <h2 class="hero__profession-primary">Frontend developer student</h2>
+              <p class="hero__profession-secondary">Leg. Biomedicinsk analytiker</p>
+            </div>
           </div>
         </div>
 
@@ -165,13 +171,21 @@
           <div class="introduction__content-wrap">
             <picture class="introduction__portrait portrait">
               <source
-                srcset="/images/portrait-600.webp 600w, /images/portrait-900.webp 900w, /images/portrait-1200.webp 1200w"
+                srcset="
+                  /images/portrait-600.webp   600w,
+                  /images/portrait-900.webp   900w,
+                  /images/portrait-1200.webp 1200w
+                "
                 type="image/webp"
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
               >
               <img
                 src="/images/portrait-900.jpg"
-                srcset="/images/portrait-600.jpg 600w, /images/portrait-900.jpg 900w, /images/portrait-1200.jpg 1200w"
+                srcset="
+                  /images/portrait-600.jpg   600w,
+                  /images/portrait-900.jpg   900w,
+                  /images/portrait-1200.jpg 1200w
+                "
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                 alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
                 width="900"
@@ -521,8 +535,139 @@
         </div>
       </section>
 
-      <section class="project">
-        <h2>Projects</h2>
+      <section class="projects">
+        <h2 class="projects__title">Projects</h2>
+        <h3 class="projects__message">This portfolio section is under construction</h3>
+
+        <ul class="projects__list">
+          <!-- 🔧 Placeholder 1 -->
+          <li class="projects__card">
+            <article class="project">
+              <img
+                src="assets/placeholder.png"
+                alt="Placeholder screenshot"
+                class="project__image"
+              >
+              <h3 class="project__name">Project name</h3>
+              <p class="project__description">This project is under construction. Stay tuned!</p>
+
+              <ul class="project__tech tech">
+                <li class="tech__item js">JavaScript</li>
+                <li class="tech__item html">HTML5</li>
+                <li class="tech__item css">CSS3</li>
+              </ul>
+
+              <div class="project__buttons button">
+                <a
+                  href="https://your-live-link.com"
+                  target="_blank"
+                  class="button--live"
+                >🔗 Live Demo</a>
+                <a
+                  href="https://github.com/thnielseen/quiz-jazz-up"
+                  target="_blank"
+                  class="button--code"
+                >💻 View Code</a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 🔧 Placeholder 2 -->
+          <li class="projects__card">
+            <article class="project">
+              <img
+                src="assets/placeholder.png"
+                alt="Placeholder screenshot"
+                class="project__image"
+              >
+              <h3 class="project__name">Project name</h3>
+              <p class="project__description">This project is under construction. Stay tuned!</p>
+
+              <ul class="project__tech tech">
+                <li class="tech__item js">JavaScript</li>
+                <li class="tech__item html">HTML5</li>
+                <li class="tech__item css">CSS3</li>
+              </ul>
+
+              <div class="project__buttons button">
+                <a
+                  href="https://your-live-link.com"
+                  target="_blank"
+                  class="button--live"
+                >🔗 Live Demo</a>
+                <a
+                  href="https://github.com/thnielseen/quiz-jazz-up"
+                  target="_blank"
+                  class="button--code"
+                >💻 View Code</a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 🔧 Placeholder 3 -->
+          <li class="projects__card">
+            <article class="project">
+              <img
+                src="assets/placeholder.png"
+                alt="Placeholder screenshot"
+                class="project__image"
+              >
+              <h3 class="project__name">Project name</h3>
+              <p class="project__description">This project is under construction. Stay tuned!</p>
+
+              <ul class="project__tech tech">
+                <li class="tech__item js">JavaScript</li>
+                <li class="tech__item html">HTML5</li>
+                <li class="tech__item css">CSS3</li>
+              </ul>
+
+              <div class="project__buttons button">
+                <a
+                  href="https://your-live-link.com"
+                  target="_blank"
+                  class="button--live"
+                >🔗 Live Demo</a>
+                <a
+                  href="https://github.com/thnielseen/quiz-jazz-up"
+                  target="_blank"
+                  class="button--code"
+                >💻 View Code</a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 🔧 Placeholder 4 -->
+          <li class="projects__card">
+            <article class="project">
+              <img
+                src="assets/placeholder.png"
+                alt="Placeholder screenshot"
+                class="project__image"
+              >
+              <h3 class="project__name">Project name</h3>
+              <p class="project__description">This project is under construction. Stay tuned!</p>
+
+              <ul class="project__tech tech">
+                <li class="tech__item js">JavaScript</li>
+                <li class="tech__item html">HTML5</li>
+                <li class="tech__item css">CSS3</li>
+              </ul>
+
+              <div class="project__buttons button">
+                <a
+                  href="https://your-live-link.com"
+                  target="_blank"
+                  class="button--live"
+                >🔗 Live Demo</a>
+                <a
+                  href="https://github.com/thnielseen/quiz-jazz-up"
+                  target="_blank"
+                  class="button--code"
+                >💻 View Code</a>
+              </div>
+            </article>
+          </li>
+        </ul>
       </section>
 
       <section
@@ -540,19 +685,29 @@
         <h2
           class="contact__title"
           id="contact-heading"
-        >Get in touch</h2>
+        >
+          Get in touch
+        </h2>
 
         <div class="contact__content">
           <div class="contact__profile">
             <picture class="contact__portrait portrait">
               <source
-                srcset="/images/portrait-600.webp 600w, /images/portrait-900.webp 900w, /images/portrait-1200.webp 1200w"
+                srcset="
+                  /images/portrait-600.webp   600w,
+                  /images/portrait-900.webp   900w,
+                  /images/portrait-1200.webp 1200w
+                "
                 type="image/webp"
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
               >
               <img
                 src="/images/portrait-900.jpg"
-                srcset="/images/portrait-600.jpg 600w, /images/portrait-900.jpg 900w, /images/portrait-1200.jpg 1200w"
+                srcset="
+                  /images/portrait-600.jpg   600w,
+                  /images/portrait-900.jpg   900w,
+                  /images/portrait-1200.jpg 1200w
+                "
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                 alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
                 width="900"

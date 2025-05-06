@@ -10,6 +10,7 @@ $color-pasiswhite: #d3e1da;
 $color-nebula: #b1d6c4;
 $color-harp: #deede6;
 $color-junglemist: #b1cfd6;
+$color-graynurse: #e5ece4;
 
 // === Nav UI ===
 $color-gainsboro: #d0e1e0;
@@ -22,6 +23,7 @@ $color-renosand: #9e6714;
 $color-gunmetal: #243837;
 $color-perutan: #813c06;
 $color-celtic: #234333;
+
 
 // === 🌐 CSS CUSTOM PROPERTY EXPORTS ===
 
@@ -62,4 +64,7 @@ $color-celtic: #234333;
   --color-bg-category: #{$color-harp};
   --color-description-hover: #{$color-pasiswhite};
   --color-outline-focus: #{$color-celtic};
+
+  --color-card-bg: #{$color-graynurse};
+  --color-white: #{$color-springwood};
 }

@@ -109,3 +109,15 @@
 .contact {
   background-color: var(--color-bg-category);
 }
+
+.main {
+  background-color: var(--color-intro-bg);
+}
+
+.projects {
+  background-color: var(--color-intro-bg);
+
+  &__card {
+    background-color: var(--color-card-bg);
+  }
+}
