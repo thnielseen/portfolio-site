@@ -1,645 +1,485 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    >
-    <meta
-      name="description"
-      content="Therese Nielsen's frontend portfolio"
-    >
-    <meta
-      name="author"
-      content="Therese Nielsen"
-    >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Therese Nielsen's frontend portfolio">
+  <meta name="author" content="Therese Nielsen">
 
-    <title>tess.prog – Frontend Portfolio 👑</title>
+  <title>tess.prog – Frontend Portfolio 👑</title>
 
-    <!-- 🔗 Favicons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    >
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    >
-    <link
-      rel="apple-touch-icon"
-      href="/favicon/apple-touch-icon.png"
-    >
+  <!-- 🔗 Favicons -->
+  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
 
-    <!-- Material Icons -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=menu_open"
-    >
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Alegreya+Sans+SC:ital,wght@0,100;0,200;0,400;0,700&family=Crimson+Pro:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Nunito:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Playball&display=swap"
-      rel="stylesheet"
-    >
-  </head>
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
 
-  <body>
-    <!-- Skip navigation for screen readers -->
-    <a
-      href="#content"
-      class="skip-link"
-    ><span>Skip to main content</span></a>
+  <!-- Material Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=language,menu_open">
 
-    <!-- Header with nav -->
-    <header class="header">
-      <div class="header__content">
-        <button
-          class="menu__button"
-          id="menuButton"
-          aria-label="Toggle main navigation"
-          aria-controls="menuNav"
-          aria-expanded="false"
-        >
-          <span class="button__icon">
-            <span class="material-symbols-rounded">menu_open</span>
-          </span>
-        </button>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Alegreya+Sans+SC:ital,wght@0,100;0,200;0,400;0,700&family=Crimson+Pro:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Nunito:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,400;1,700&family=Playball&display=swap"
+    rel="stylesheet">
+</head>
 
-        <nav
-          class="nav"
-          id="menuNav"
-          aria-label="Main Site Navigation"
-        >
-          <a
-            class="nav__link js-link"
-            href="#presentation"
-          ><span>Home</span></a>
-          <a
-            class="nav__link js-link"
-            href="#about"
-          ><span>About Me</span></a>
-          <a
-            class="nav__link js-link"
-            href="#skills"
-          ><span>Skills</span></a>
-          <a
-            class="nav__link js-link"
-            href="#projects"
-          ><span>Projects</span></a>
-          <a
-            class="nav__link js-link"
-            href="#contact"
-          ><span>Contact</span></a>
-        </nav>
+<body>
+  <!-- Skip navigation for screen readers -->
+  <a href="#content" class="skip-link"><span>Skip to main content</span></a>
 
-        <nav
-          class="header__nav socials"
-          aria-label="External Links to GitHub, LinkedIn and CV"
-        >
-          <a
-            class="socials__link"
-            href="https://github.com/thnielseen"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit my GitHub profile"
-          >
-            <span
-              class="icon__github"
-              aria-hidden="true"
-            ></span>
-          </a>
-          <a
-            class="socials__link"
-            href="https://www.linkedin.com/in/therese-j-nielsen/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit my LinkedIn profile"
-          >
-            <span
-              class="icon__linkedIn"
-              aria-hidden="true"
-            ></span>
-          </a>
-          <a
-            class="socials__link"
-            href="/files/therese-nielsen-cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Download my CV as PDF"
-          >
-            <span
-              class="icon__cv"
-              aria-hidden="true"
-            ></span>
-          </a>
-        </nav>
-      </div>
-    </header>
+  <!-- Header with nav -->
+  <header class="header">
+    <div class="header__content">
+      <button class="menu__button" id="menuButton" aria-label="Toggle main navigation" aria-controls="menuNav"
+        aria-expanded="false">
+        <span class="button__icon">
+          <span class="material-symbols-rounded">menu_open</span>
+        </span>
+      </button>
 
-    <main
-      class="main"
-      id="content"
-    >
-      <section
-        class="introduction"
-        id="introduction"
-        aria-labelledby="intro-heading"
-      >
-        <div class="introduction__hero hero">
+      <nav class="nav" id="menuNav" aria-label="Main Site Navigation">
+        <a class="nav__link js-link" href="#presentation"><span>Home</span></a>
+        <a class="nav__link js-link" href="#about"><span>About Me</span></a>
+        <a class="nav__link js-link" href="#skills"><span>Skills</span></a>
+        <a class="nav__link js-link" href="#projects"><span>Projects</span></a>
+        <a class="nav__link js-link" href="#contact"><span>Contact</span></a>
+      </nav>
+
+      <nav class="header__nav socials" aria-label="External Links to GitHub, LinkedIn and CV">
+        <a class="socials__link" href="https://github.com/thnielseen" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit my GitHub profile">
+          <span class="icon__github" aria-hidden="true"></span>
+        </a>
+        <a class="socials__link" href="https://www.linkedin.com/in/therese-j-nielsen/" target="_blank"
+          rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+          <span class="icon__linkedIn" aria-hidden="true"></span>
+        </a>
+        <a class="socials__link" href="/files/therese-nielsen-cv.pdf" target="_blank" rel="noopener noreferrer"
+          aria-label="Download my CV as PDF">
+          <span class="icon__cv" aria-hidden="true"></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" id="content">
+    <section class="introduction" id="introduction" aria-labelledby="intro-heading">
+      <div class="introduction__hero">
+        <div class="hero">
           <div class="hero__content">
-            <h1
-              class="hero__name"
-              id="intro-heading"
-            >Therese Nielsen</h1>
+            <h1 class="hero__name" id="intro-heading">
+              Therese Nielsen
+            </h1>
             <h2 class="hero__profession-primary">Frontend developer student</h2>
             <p class="hero__profession-secondary">Leg. Biomedicinsk analytiker</p>
           </div>
         </div>
+      </div>
 
-        <div class="introduction__content">
-          <div class="introduction__content-wrap">
-            <picture class="introduction__portrait portrait">
-              <source
-                srcset="/images/portrait-600.webp 600w, /images/portrait-900.webp 900w, /images/portrait-1200.webp 1200w"
-                type="image/webp"
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-              >
-              <img
-                src="/images/portrait-900.jpg"
-                srcset="/images/portrait-600.jpg 600w, /images/portrait-900.jpg 900w, /images/portrait-1200.jpg 1200w"
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
-                width="900"
-                height="900"
-                loading="lazy"
-                class="portrait__img"
-              >
-            </picture>
+      <div class="introduction__content">
+        <div class="introduction__content-wrap">
+          <picture class="introduction__portrait portrait">
+            <source srcset="
+                  /images/portrait-600.webp   600w,
+                  /images/portrait-900.webp   900w,
+                  /images/portrait-1200.webp 1200w
+                " type="image/webp" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw">
+            <img src="/images/portrait-900.jpg" srcset="
+                  /images/portrait-600.jpg   600w,
+                  /images/portrait-900.jpg   900w,
+                  /images/portrait-1200.jpg 1200w
+                " sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+              alt="Therese Nielsen, frontend developer student – personal portfolio portrait" width="900" height="900"
+              loading="lazy" class="portrait__img">
+          </picture>
 
-            <blockquote class="introduction__quote quote">
-              <p>Curiosity is my <span class="quote__emph">compass</span>,</p>
-              <p>and learning is the <span class="quote__emph">journey</span>,</p>
-              <p class="quote__line">growth happens when you’re</p>
-              <p class="quote__emph">slightly terrified</p>
-            </blockquote>
-          </div>
+          <blockquote class="introduction__quote quote">
+            <p>I turn ideas into <span class="quote__emph">useful</span> interfaces,</p>
+            <p>one pixel and one <span class="quote__emph">problem</span> at a time.</p>
+          </blockquote>
+        </div>
 
-          <div class="introduction__presentation presentation">
-            <p>
-              I’m a curious and driven person with eight years of experience in clinical laboratory
-              work within healthcare. Currently, I’m training to become a frontend developer, where
-              I combine analytical thinking with creative problem-solving. I'm motivated by
-              learning, growing, and contributing with passion, precision, and a strong technical
-              interest.
+        <div class="introduction__presentation presentation">
+          <p>
+            I’m a curious and driven person with eight years of experience in clinical laboratory
+            work within healthcare. Currently, I’m training to become a frontend developer, where
+            I combine analytical thinking with creative problem-solving. I'm motivated by
+            learning, growing, and contributing with passion, precision, and a strong technical
+            interest.
+          </p>
+          <button class="presentation__cta">
+            <span><span class="hide">Explore</span> My Projects</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2 class="skills__title">Skills</h2>
+      <h3 class="projects__message">This portfolio section is under construction</h3>
+
+      <div class="skills__content">
+        <!-- Code Skills -->
+        <div class="skills__category skills__category--code">
+          <h3 class="category__title">
+            <span class="category__title-icon icon__code-black" aria-hidden="true"></span>
+            <span class="category__title-text">Code Skills</span>
+          </h3>
+          <ul class="category__list">
+            <li class="category__item" tabindex="0">
+              <p class="item__name">HTML5 / Semantic HTML</p>
+              <p class="item__description">
+                I write clean, accessible markup using the right tags for meaning and structure.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">CSS3 / SCSS</p>
+              <p class="item__description">
+                Deep knowledge of SCSS with 7:1 architecture, mixins, variables, and forwards.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">JavaScript (ES6+)</p>
+              <p class="item__description">
+                I use modern JS features like map, filter, async/await, and understand DOM
+                manipulation well.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">TypeScript</p>
+              <p class="item__description">
+                Basic but growing experience. I use typing to add structure and improve code
+                quality.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Vue.js</p>
+              <p class="item__description">
+                Learning and applying Vue in projects, building components and handling state.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Basic API Handling</p>
+              <p class="item__description">
+                I fetch and handle data using fetch/axios and understand async flows.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">DOM Manipulation</p>
+              <p class="item__description">
+                I dynamically update and interact with the DOM when needed.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Responsive Design</p>
+              <p class="item__description">
+                I build layouts that adapt across devices using mobile-first principles.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Accessibility (a11y)</p>
+              <p class="item__description">
+                I apply WCAG guidelines, use proper landmarks, keyboard navigation and ensure
+                contrast.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Design Skills -->
+        <div class="skills__category skills__category--design">
+          <h3 class="category__title">
+            <span class="category__title-icon icon__design-black" aria-hidden="true"></span>
+            <span class="category__title-text">Design Skills</span>
+          </h3>
+          <ul class="category__list">
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Flexbox & Grid Layouts</p>
+              <p class="item__description">
+                I create clean, responsive layouts using modern CSS layout techniques.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Typography & Color Systems</p>
+              <p class="item__description">
+                I build visual systems using accessible contrast and typographic hierarchy.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Component-Based Design</p>
+              <p class="item__description">
+                I apply atomic design principles to create reusable UI elements.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Figma (Basic)</p>
+              <p class="item__description">
+                I can read and build from wireframes, and create quick mockups for layout
+                planning.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Design Systems</p>
+              <p class="item__description">
+                I structure styles and components for consistency and reuse across projects.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Attention to Detail</p>
+              <p class="item__description">
+                I care about visual alignment, spacing, and intuitive UI.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tools & Workflow -->
+        <div class="skills__category skills__category--tools">
+          <h3 class="category__title">
+            <span class="category__title-icon icon__tools-black" aria-hidden="true"></span>
+            <span class="category__title-text">Tools & Workflow</span>
+          </h3>
+          <ul class="category__list">
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Visual Studio Code</p>
+              <p class="item__description">
+                My main editor, customized with extensions and settings for productivity.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">pnpm / npm</p>
+              <p class="item__description">
+                I manage packages and scripts efficiently using modern tooling.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Prettier + ESLint</p>
+              <p class="item__description">
+                I keep my code clean and consistent with automated formatting and linting.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Git & GitHub</p>
+              <p class="item__description">
+                I track, update and share code with version control and remote repos.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Vite / Rollup</p>
+              <p class="item__description">
+                I use Vite for Vue builds and have explored custom builds with Rollup.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">DevTools</p>
+              <p class="item__description">
+                I debug, inspect and optimize layout and performance in the browser.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Deployment</p>
+              <p class="item__description">
+                I deploy projects via Netlify or GitHub Pages for live previews.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills__category skills__category--soft">
+          <h3 class="category__title">
+            <span class="category__title-icon icon__soft-black" aria-hidden="true"></span>
+            <span class="category__title-text">Soft Skills & Mindset</span>
+          </h3>
+          <ul class="category__list">
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Structured & Curious</p>
+              <p class="item__description">
+                I approach projects with order, and I’m always exploring new ways to improve.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Fast Learner</p>
+              <p class="item__description">
+                I quickly understand new tools or concepts by applying them directly in projects.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Problem Solver</p>
+              <p class="item__description">
+                I enjoy breaking down issues and iterating on solutions until they’re right.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Iterative Workflow</p>
+              <p class="item__description">
+                I build in steps, test often, and refactor to improve quality.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Big Picture Thinking</p>
+              <p class="item__description">
+                I think about design, code, accessibility, and usability as a whole.
+              </p>
+            </li>
+            <li class="category__item" tabindex="0">
+              <p class="item__name">Independent & Collaborative</p>
+              <p class="item__description">
+                I’m comfortable working solo or in a team, and communicate clearly.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2 class="projects__title">Projects</h2>
+      <h3 class="projects__message">This portfolio section is under construction</h3>
+
+      <ul class="projects__list">
+
+        <li class="projects__card">
+          <article class="project">
+            <img src="/images/projects/SR-humor.webp"
+              alt="Screenshot of SR Humorprogram – two podcast cards in light and dark mode" class="project__image">
+            <h3 class="project__name">SR Humorprogram</h3>
+            <p class="project__description">
+              A podcast listing powered by Sveriges Radio API. Focused on accessibility, theme
+              toggling, and clean TypeScript/SCSS structure.
             </p>
-            <button class="presentation__cta">
-              <span><span class="hide">Explore</span> My Projects</span>
-            </button>
-          </div>
-        </div>
-      </section>
 
-      <section
-        class="skills"
-        id="skills"
-      >
-        <h2 class="skills__title">Skills</h2>
-
-        <div class="skills__content">
-          <!-- Code Skills -->
-          <div class="skills__category skills__category--code">
-            <h3 class="category__title">
-              <span
-                class="category__title-icon icon__code-black"
-                aria-hidden="true"
-              ></span>
-              <span class="category__title-text">Code Skills</span>
-            </h3>
-            <ul class="category__list">
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">HTML5 / Semantic HTML</p>
-                <p class="item__description">
-                  I write clean, accessible markup using the right tags for meaning and structure.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">CSS3 / SCSS</p>
-                <p class="item__description">
-                  Deep knowledge of SCSS with 7:1 architecture, mixins, variables, and forwards.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">JavaScript (ES6+)</p>
-                <p class="item__description">
-                  I use modern JS features like map, filter, async/await, and understand DOM
-                  manipulation well.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">TypeScript</p>
-                <p class="item__description">
-                  Basic but growing experience. I use typing to add structure and improve code
-                  quality.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Vue.js</p>
-                <p class="item__description">
-                  Learning and applying Vue in projects, building components and handling state.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Basic API Handling</p>
-                <p class="item__description">
-                  I fetch and handle data using fetch/axios and understand async flows.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">DOM Manipulation</p>
-                <p class="item__description">
-                  I dynamically update and interact with the DOM when needed.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Responsive Design</p>
-                <p class="item__description">
-                  I build layouts that adapt across devices using mobile-first principles.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Accessibility (a11y)</p>
-                <p class="item__description">
-                  I apply WCAG guidelines, use proper landmarks, keyboard navigation and ensure
-                  contrast.
-                </p>
-              </li>
+            <ul class="project__tech tech">
+              <li class="tech__item ts">TypeScript</li>
+              <li class="tech__item html">HTML5</li>
+              <li class="tech__item scss">SCSS</li>
             </ul>
-          </div>
 
-          <!-- Design Skills -->
-          <div class="skills__category skills__category--design">
-            <h3 class="category__title">
-              <span
-                class="category__title-icon icon__design-black"
-                aria-hidden="true"
-              ></span>
-              <span class="category__title-text">Design Skills</span>
-            </h3>
-            <ul class="category__list">
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Flexbox & Grid Layouts</p>
-                <p class="item__description">
-                  I create clean, responsive layouts using modern CSS layout techniques.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Typography & Color Systems</p>
-                <p class="item__description">
-                  I build visual systems using accessible contrast and typographic hierarchy.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Component-Based Design</p>
-                <p class="item__description">
-                  I apply atomic design principles to create reusable UI elements.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Figma (Basic)</p>
-                <p class="item__description">
-                  I can read and build from wireframes, and create quick mockups for layout
-                  planning.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Design Systems</p>
-                <p class="item__description">
-                  I structure styles and components for consistency and reuse across projects.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Attention to Detail</p>
-                <p class="item__description">
-                  I care about visual alignment, spacing, and intuitive UI.
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Tools & Workflow -->
-          <div class="skills__category skills__category--tools">
-            <h3 class="category__title">
-              <span
-                class="category__title-icon icon__tools-black"
-                aria-hidden="true"
-              ></span>
-              <span class="category__title-text">Tools & Workflow</span>
-            </h3>
-            <ul class="category__list">
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Visual Studio Code</p>
-                <p class="item__description">
-                  My main editor, customized with extensions and settings for productivity.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">pnpm / npm</p>
-                <p class="item__description">
-                  I manage packages and scripts efficiently using modern tooling.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Prettier + ESLint</p>
-                <p class="item__description">
-                  I keep my code clean and consistent with automated formatting and linting.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Git & GitHub</p>
-                <p class="item__description">
-                  I track, update and share code with version control and remote repos.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Vite / Rollup</p>
-                <p class="item__description">
-                  I use Vite for Vue builds and have explored custom builds with Rollup.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">DevTools</p>
-                <p class="item__description">
-                  I debug, inspect and optimize layout and performance in the browser.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Deployment</p>
-                <p class="item__description">
-                  I deploy projects via Netlify or GitHub Pages for live previews.
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Soft Skills -->
-          <div class="skills__category skills__category--soft">
-            <h3 class="category__title">
-              <span
-                class="category__title-icon icon__soft-black"
-                aria-hidden="true"
-              ></span>
-              <span class="category__title-text">Soft Skills & Mindset</span>
-            </h3>
-            <ul class="category__list">
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Structured & Curious</p>
-                <p class="item__description">
-                  I approach projects with order, and I’m always exploring new ways to improve.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Fast Learner</p>
-                <p class="item__description">
-                  I quickly understand new tools or concepts by applying them directly in projects.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Problem Solver</p>
-                <p class="item__description">
-                  I enjoy breaking down issues and iterating on solutions until they’re right.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Iterative Workflow</p>
-                <p class="item__description">
-                  I build in steps, test often, and refactor to improve quality.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Big Picture Thinking</p>
-                <p class="item__description">
-                  I think about design, code, accessibility, and usability as a whole.
-                </p>
-              </li>
-              <li
-                class="category__item"
-                tabindex="0"
-              >
-                <p class="item__name">Independent & Collaborative</p>
-                <p class="item__description">
-                  I’m comfortable working solo or in a team, and communicate clearly.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="project">
-        <h2>Projects</h2>
-      </section>
-
-      <section
-        class="about"
-        id="about"
-      >
-        <h2>About Me</h2>
-      </section>
-
-      <section
-        class="contact"
-        id="contact"
-        aria-labelledby="contact-heading"
-      >
-        <h2
-          class="contact__title"
-          id="contact-heading"
-        >Get in touch</h2>
-
-        <div class="contact__content">
-          <div class="contact__profile">
-            <picture class="contact__portrait portrait">
-              <source
-                srcset="/images/portrait-600.webp 600w, /images/portrait-900.webp 900w, /images/portrait-1200.webp 1200w"
-                type="image/webp"
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-              >
-              <img
-                src="/images/portrait-900.jpg"
-                srcset="/images/portrait-600.jpg 600w, /images/portrait-900.jpg 900w, /images/portrait-1200.jpg 1200w"
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                alt="Therese Nielsen, frontend developer student – personal portfolio portrait"
-                width="900"
-                height="900"
-                loading="lazy"
-                class="portrait__img"
-              >
-            </picture>
-
-            <div class="contact__info">
-              <p class="contact__name">Therese Nielsen</p>
-              <p class="contact__profession-primary">Frontend developer student</p>
-              <p class="contact__profession-secondary">Leg. Biomedicinsk analytiker</p>
+            <div class="project__actions actions">
+              <a href="https://medieinstitutet.github.io/fed24d-arbetsmetodik-inl-1-thnielseen/" target="_blank"
+                class="actions__link actions__link--live">
+                <span class="material-symbols-rounded" aria-hidden="true">language</span>
+                <span>Live Demo</span>
+              </a>
+              <a href="https://github.com/Medieinstitutet/fed24d-arbetsmetodik-inl-1-thnielseen/tree/main"
+                target="_blank" class="actions__link actions__link--code">
+                <span class="actions__icon" aria-hidden="true"></span>
+                <span>View Code</span>
+              </a>
             </div>
+          </article>
+        </li>
+
+        <li class="projects__card">
+          <article class="project">
+            <img src="/images/projects/jazzy-quiz.webp"
+              alt="Screenshot of a quiz game with timer, score and colorful answer cards" class="project__image">
+            <h3 class="project__name">Quiz Game – Scrum Group Project</h3>
+            <p class="project__description">
+              A fast-paced and accessible quiz game developed in a 4-week group project using
+              Scrum. Includes randomized questions, score tracking, timer, and keyboard
+              navigation.
+            </p>
+            <ul class="project__tech tech">
+              <li class="tech__item ts">TypeScript</li>
+              <li class="tech__item html">HTML5</li>
+              <li class="tech__item scss">SCSS</li>
+              <li class="tech__item js">JavaScript</li>
+            </ul>
+
+            <div class="project__actions actions">
+              <a href="https://medieinstitutet.github.io/fed24d-js-intro-inl-2-quiz-jazzy/" target="_blank"
+                class="actions__link actions__link--live">
+                <span class="material-symbols-rounded" aria-hidden="true">language</span>
+                <span>Live Demo</span>
+              </a>
+              <a href="https://github.com/your-repo-link" target="_blank" class="actions__link actions__link--code">
+                <span class="actions__icon" aria-hidden="true"></span>
+                <span>View Code</span>
+              </a>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+
+      </article>
+      </li>
+
+      </ul>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="about__title">About Me</h2>
+      <h3 class="projects__message">This portfolio section is empty - for now!</h3>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <h2 class="contact__title" id="contact-heading">
+        Get in touch
+      </h2>
+
+      <div class="contact__content">
+        <div class="contact__profile">
+          <picture class="contact__portrait portrait">
+            <source srcset="
+                  /images/portrait-600.webp   600w,
+                  /images/portrait-900.webp   900w,
+                  /images/portrait-1200.webp 1200w
+                " type="image/webp" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw">
+            <img src="/images/portrait-900.jpg" srcset="
+                  /images/portrait-600.jpg   600w,
+                  /images/portrait-900.jpg   900w,
+                  /images/portrait-1200.jpg 1200w
+                " sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+              alt="Therese Nielsen, frontend developer student – personal portfolio portrait" width="900" height="900"
+              loading="lazy" class="portrait__img">
+          </picture>
+
+          <div class="contact__info">
+            <p class="contact__name">Therese Nielsen</p>
+            <p class="contact__profession-primary">Frontend developer student</p>
+            <p class="contact__profession-secondary">Leg. Biomedicinsk analytiker</p>
           </div>
-
-          <address class="contact__details">
-            <p class="contact__item">
-              <a
-                href="tel:+46708562535"
-                aria-label="Call Therese Nielsen at +46 708 56 25 35"
-              >+46 (0) 708 56 25 35</a>
-            </p>
-            <p class="contact__item">
-              <a
-                href="mailto:therese.nielsen@medieinstitutet.se"
-                aria-label="Email Therese at therese dot nielsen at medieinstitutet dot se"
-              >therese.nielsen@medieinstitutet.se</a>
-            </p>
-            <p class="contact__item">
-              <a
-                href="mailto:tess.prog@gmail.com"
-                aria-label="Email Therese at tess dot prog at gmail dot com"
-              >tess.prog@gmail.com</a>
-            </p>
-            <p class="contact__item">Gothenburg, Sweden</p>
-          </address>
-
-          <nav
-            class="contact__socials socials"
-            aria-label="Social and download links"
-          >
-            <a
-              class="socials__link"
-              href="https://github.com/thnielseen"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Therese's GitHub profile"
-            >
-              <span
-                class="icon__github-black"
-                aria-hidden="true"
-              ></span>
-            </a>
-            <a
-              class="socials__link"
-              href="https://www.linkedin.com/in/therese-j-nielsen/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Therese's LinkedIn profile"
-            >
-              <span
-                class="icon__linkedIn-black"
-                aria-hidden="true"
-              ></span>
-            </a>
-            <a
-              class="socials__link"
-              href="/files/therese-nielsen-cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download Therese's CV as PDF"
-            >
-              <span
-                class="icon__cv"
-                aria-hidden="true"
-              ></span>
-            </a>
-          </nav>
         </div>
-      </section>
-    </main>
 
-    <script
-      type="module"
-      src="/src/index.ts"
-    ></script>
-  </body>
+        <address class="contact__details">
+          <p class="contact__item">
+            <a href="tel:+46708562535" aria-label="Call Therese Nielsen at +46 708 56 25 35">+46 (0) 708 56 25 35</a>
+          </p>
+          <p class="contact__item">
+            <a href="mailto:therese.nielsen@medieinstitutet.se"
+              aria-label="Email Therese at therese dot nielsen at medieinstitutet dot se">therese.nielsen@medieinstitutet.se</a>
+          </p>
+          <p class="contact__item">
+            <a href="mailto:tess.prog@gmail.com"
+              aria-label="Email Therese at tess dot prog at gmail dot com">tess.prog@gmail.com</a>
+          </p>
+          <p class="contact__item">Gothenburg, Sweden</p>
+        </address>
+
+        <nav class="contact__socials socials" aria-label="Social and download links">
+          <a class="socials__link" href="https://github.com/thnielseen" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit Therese's GitHub profile">
+            <span class="icon__github-black" aria-hidden="true"></span>
+          </a>
+          <a class="socials__link" href="https://www.linkedin.com/in/therese-j-nielsen/" target="_blank"
+            rel="noopener noreferrer" aria-label="Visit Therese's LinkedIn profile">
+            <span class="icon__linkedIn-black" aria-hidden="true"></span>
+          </a>
+          <a class="socials__link" href="/files/therese-nielsen-cv.pdf" target="_blank" rel="noopener noreferrer"
+            aria-label="Download Therese's CV as PDF">
+            <span class="icon__cv" aria-hidden="true"></span>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/index.ts"></script>
+</body>
 
 </html>

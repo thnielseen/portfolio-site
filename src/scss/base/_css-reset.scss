@@ -18,6 +18,13 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-wrap: break-word; 
+  overflow-x: hidden;
 }
 
 // Reset table spacing
@@ -66,6 +73,12 @@ svg {
   display: block;
 }
 
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 // Reset blockquote and q styles
 blockquote,
 q {
@@ -92,4 +105,8 @@ strong,
 em {
   margin: 0;
   font-weight: inherit;
+}
+
+:where(.flex, .grid) > * {
+  min-width: 0;
 }
