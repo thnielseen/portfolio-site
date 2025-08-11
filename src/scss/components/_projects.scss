@@ -2,6 +2,7 @@
 @use '@abstracts' as *;
 
 // === PROJECTS SECTION ===
+.about,
 .projects {
   width: 100%;
   max-width: fn-rem(1440);
